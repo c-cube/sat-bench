@@ -1,0 +1,7 @@
+
+(executable
+  (name main)
+  (public_name sat_bench)
+  (flags :standard -warn-error -a+8)
+  (libraries oclock dolmen printbox msat minisat sattools satools-miniast
+             sattools-cryptominisat aez ocaml-sat-solvers mc2.core mc2.propositional))

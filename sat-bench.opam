@@ -1,15 +1,12 @@
-opam-version: "1.2"
+opam-version: "2.0"
 name: "sat-bench"
+synopsis: "Benchmark various SAT solvers"
 license: "todo"
 version: "dev"
 author: ["Guillaume Bury"]
 maintainer: ["Guillaume Bury"]
 build: [
-    [make "all"]
-]
-install: [
-]
-remove: [
+  ["dune" "build" "@install" "-p" name "-j" jobs]
 ]
 depends: [
   "ocamlfind" {build}
@@ -26,12 +23,10 @@ depends: [
   "ocaml-sat-solvers"
   "aez"
   "mc2"
-]
-available: [
-  ocaml-version >= "4.03.0"
+  "ocaml" { >= "4.03.0" }
 ]
 tags: [ "sat" "bench" ]
 homepage: "https://github.com/gbury/sat-bench"
-dev-repo: "https://github.com/gbury/sat-bench.git"
+dev-repo: "git+https://github.com/gbury/sat-bench.git"
 bug-reports: "https://github.com/gbury/sat-bench/issues/"
 
